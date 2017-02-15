@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Product Detail</title>
+    <!--<meta charset="utf-8" />-->
+    <!--<meta name="author" content="" />-->
+    <!--<meta name="keywords" content="" />-->
+    <meta name="viewport" content="initial-scale=1" />
+    <!--<link href="#" rel="shortcut icon" type="image/x-icon" />-->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style-document.css" rel="stylesheet" />
+    <link href="css/respondsive.css" rel="stylesheet" />
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/jquery.extended.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body id="productDetailPage">
+    <div id="document" class="document">
+
+        <!-- Start header area -->
+        <div id="header">
+            <div id="headerArea" class="layout mgfix">
+                <div class="clear mgT20">
+                    <a id="cartInfo" class="cart-viewer-1 right" href="cart.html">
+                        <span>0</span>
+                        <i></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End header area -->
+        <!-- Start content area -->
+        <div id="content">
+            <div id="contentArea" class="layout">
+                <div id="productDetail" class="product-detail-1 mgT20"></div>
+            </div>
+        </div>
+        <!-- End content area -->
+        <!-- Start footer area -->
+        <div id="footer">
+            <div id="footerArea">
+            </div>
+        </div>
+        <!-- End footer area -->
+
+    </div>
+    <script>
+        var products = getStorage(productsStorage);
+
+        var productID = getUrlParameter("prd");
+        showDetailProduct(productID, products);
+        displayCartInfo();
+
+        // Add Cart
+        $('#productDetail').find('.addcart').click(function () {
+            var id = $(this).attr('data-product-id');
+            var quantity = parseInt($('#productDetail [name="quantity"]').val());
+
+            // get Cart from Storage
+            var productCart = getStorage(productsCartStorage);
+            addCart(id, quantity, productCart);
+            // set Cart again to Storage
+            setStorage(productsCartStorage, productCart);
+
+            displayCartInfo();
+        })
+    </script>
+</body>
+</html>

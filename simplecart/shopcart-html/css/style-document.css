@@ -1,0 +1,62 @@
+﻿
+/* ===============================================
+     DOCUMENT /////////////////////////////////////////////////////////// */
+body {
+}
+
+.layout {
+    margin: 0 auto;
+}
+
+
+/* ===============================================
+     HEADER /////////////////////////////////////////////////////////// */
+
+
+/* ===============================================
+     CONTENT /////////////////////////////////////////////////////////// */
+#productPage {
+    background: #e0e0d5;
+}
+
+#productDetailPage {
+    background: #F4F4F4;
+}
+
+#cartPage {
+    background: #F4F4F4;
+}
+
+    #cartPage #tableProductCart .row > span[data-col-name="thumnail"] {
+        width: 70px;
+    }
+
+    #cartPage #tableProductCart .row > span[data-col-name="name"] {
+        width: 250px;
+    }
+
+    #cartPage #tableProductCart .row > span[data-col-name="short-description"] {
+    }
+
+    #cartPage #tableProductCart .row > span[data-col-name="price"] {
+        width: 125px;
+    }
+
+    #cartPage #tableProductCart .row > span[data-col-name="quantity"] {
+        width: 125px;
+    }
+
+        #cartPage #tableProductCart .row > span[data-col-name="quantity"] input[type="number"] {
+            width: 80px;
+        }
+
+    #cartPage #tableProductCart .row > span[data-col-name="total-price"] {
+        width: 125px;
+    }
+
+    #cartPage #tableProductCart .row > span[data-col-name="action"] {
+        width: 40px;
+    }
+
+/* ===============================================
+     FOOTER /////////////////////////////////////////////////////////// */

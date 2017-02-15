@@ -1,0 +1,127 @@
+﻿
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ============ DEFAULT STYLE FOR TAG ELEMENTS =================
+//////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ===========================================
+     Selection Text /////////////////////////////////////////////////////////// */
+::selection { background: #FF6A00; color: #FFFFFF; }
+*::-moz-selection { background: #FF6A00; color: #FFFFFF; }
+
+
+/* ========================================
+     Structure /////////////////////////////////////////////////////////// */
+div { }
+header { display: block; }
+section { display: block; }
+footer { display: block; }
+aside { }
+article { }
+details { }
+figcaption { }
+figure { }
+hgroup { }
+nav { display: block }
+menu { }
+span { }
+
+
+/* ====================================
+     Text /////////////////////////////////////////////////////////// */
+p { font-size: 14px; font-weight: normal; }
+h1 { font-size: 24px; font-weight: bold; }
+h2 { font-size: 22px; font-weight: bold; }
+h3 { font-size: 20px; font-weight: bold; }
+h4 { font-size: 18px; font-weight: bold; }
+h5 { font-size: 16px; font-weight: bold; }
+h6 { font-size: 14px; font-weight: bold; }
+strong { font-weight: bolder; }
+em { }
+abbr { }
+acronym { }
+address { }
+bdo { }
+blockquote { }
+cite { }
+q { }
+code { }
+ins { }
+del { }
+dfn { }
+kbd { }
+pre { }
+samp { }
+var { }
+br { }
+font { }
+
+
+/* ====================================
+     Link /////////////////////////////////////////////////////////// */
+a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:link { }
+    a:active { }
+
+
+/* ================================================
+     Images and Objects /////////////////////////////////////////////////////////// */
+img { vertical-align: bottom; }
+area { }
+map { }
+object { }
+param { }
+canvas { }
+iframe { }
+
+
+/* ====================================
+     Lists /////////////////////////////////////////////////////////// */
+ul { list-style: none; }
+ol { }
+li { }
+dl { }
+dt { }
+dd { }
+
+
+/* ======================================
+     Tables /////////////////////////////////////////////////////////// */
+table { }
+tr { }
+td { }
+th { }
+tbody { }
+thead { }
+tfoot { }
+col { }
+colgroup { }
+caption { }
+
+
+/* ======================================
+     Forms /////////////////////////////////////////////////////////// */
+form { }
+fieldset { }
+legend { }
+label { }
+input { }
+textarea { resize: none; }
+select { }
+option { }
+optgroup { }
+datalist { }
+button { }
+
+
+/* ============================================
+     Presentational /////////////////////////////////////////////////////////// */
+b { font-weight: bold; }
+i { font-style: italic; }
+tt { }
+sub { font-size: 80%; vertical-align: sub; }
+sup { font-size: 80%; vertical-align: super; }
+big { }
+small { }
+hr { }

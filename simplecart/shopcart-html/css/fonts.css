@@ -1,0 +1,62 @@
+﻿
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ============ FONT FACE =====================================
+//////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* =========================================
+     Font Helvetica Neue  /////////////////////////////////////////////////////////// */
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('fonts/helvetica-neue/helvetica-neue-light-webfont.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ===============================================
+     Font Roboto Condensed  ////////////////////////////////////////////////// */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/robotocondensed-webfont.eot');
+    src: url('fonts/roboto/robotocondensed-webfont.eot?#iefix') format('embedded-opentype'),
+           url('fonts/roboto/robotocondensed-webfont.woff') format('woff'),
+           url('fonts/roboto/robotocondensed-webfont.ttf') format('truetype'),
+           url('fonts/roboto/robotocondensed-webfont.svg#roboto_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* =========================================
+     Font UTM Cafeta  /////////////////////////////////////////////////////////// */
+@font-face {
+    font-family: 'UTMCafeta';
+    src: url('fonts/cafeta/utm-cafeta-webfont.eot');
+    src: url('fonts/cafeta/utm-cafeta-webfont.eot?#iefix') format('embedded-opentype'), 
+           url('fonts/cafeta/utm-cafeta-webfont.woff') format('woff'), 
+           url('fonts/cafeta/utm-cafeta-webfont.ttf') format('truetype'), 
+           url('fonts/cafeta/utm-cafeta-webfont.svg#utm_cafetaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ============================================
+     Font Expansiva  /////////////////////////////////////////////////////////// */
+@font-face {
+    font-family: 'Expansiva';
+    src: url('fonts/expansiva/expansiva-bold-webfont.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* =========================================
+     Font Digital  /////////////////////////////////////////////////////////// */
+@font-face {
+    font-family: 'Digital';
+    src: url('fonts/digital/digital-webfont.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

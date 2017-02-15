@@ -1,0 +1,236 @@
+﻿
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ============ RESPONDSIVE FOR DEVICES =======================
+//////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* =====================================
+     > 1920 /////////////////////////////////////////////////////////// */
+@media screen and (min-width: 1920px) {
+    .layout {
+        width: 1900px;
+    }
+
+    #productPage ul#listProduct > li {
+        width: 25%;
+    }
+}
+
+
+/* =====================================
+     < 1920 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 1920px) {
+    .layout {
+        width: 1500px;
+    }
+
+    #productPage ul#listProduct > li {
+        width: 25%;
+    }
+}
+
+
+/* =====================================
+     < 1560 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 1560px) {
+    .layout {
+        width: 1300px;
+    }
+}
+
+
+/* =====================================
+     < 1366 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 1366px) {
+    .layout {
+        width: 1250px;
+    }
+}
+
+
+/* =====================================
+     < 1280 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 1280px) {
+    .layout {
+        width: 1170px;
+    }
+}
+
+
+/* =====================================
+     < 1200 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 1200px) {
+    .layout {
+        width: 1140px;
+    }
+}
+
+
+/* =====================================
+     < 1170 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 1170px) {
+    .layout {
+        width: 995px;
+    }
+
+    #productPage ul#listProduct > li {
+        width: 33.33%;
+    }
+
+    #cartPage #tableProductCart > .content > .row-respondsive {
+        display: block;
+    }
+
+    #cartPage #tableProductCart .row > span[data-col-name="short-description"] {
+        display: none;
+    }
+
+    #cartPage #tableProductCart .content > .row-respondsive [data-excol-name="short-description"] {
+        display: table-row;
+    }
+}
+
+
+/* =====================================
+     < 1024 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 1024px) {
+    .layout {
+        width: 930px;
+    }
+}
+
+
+/* =====================================
+     < 960 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 960px) {
+    .layout {
+        width: 820px;
+    }
+}
+
+
+/* =====================================
+     < 854 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 854px) {
+    .layout {
+        width: 770px;
+    }
+
+    #cartPage #tableProductCart .row > span[data-col-name="thumnail"] {
+        display: none;
+    }
+
+    #cartPage #tableProductCart .content > .row-respondsive [data-excol-name="thumnail"] {
+        display: table-row;
+    }
+
+    #productDetailPage #productDetail {
+        display: block;
+        table-layout: auto;
+    }
+
+        #productDetailPage #productDetail > .thumnail-price {
+            display: block;
+            margin: 0 auto;
+        }
+
+        #productDetailPage #productDetail > .name-detail-addcart {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+}
+
+
+/* =====================================
+     < 800 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 800px) {
+    .layout {
+        width: 735px;
+    }
+
+    #productPage ul#listProduct > li {
+        width: 50%;
+    }
+
+    #cartPage #tableProductCart .row > span[data-col-name="total-price"] {
+        display: none;
+    }
+
+    #cartPage #tableProductCart .content > .row-respondsive [data-excol-name="total-price"] {
+        display: table-row;
+    }
+}
+
+
+/* =====================================
+     < 768 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 768px) {
+    .layout {
+        width: 690px;
+    }
+}
+
+
+/* =====================================
+     < 720 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 720px) {
+    .layout {
+        width: 610px;
+    }
+
+
+
+    #cartPage #tableProductCart .row > span[data-col-name="price"] {
+        display: none;
+    }
+
+    #cartPage #tableProductCart .content > .row-respondsive [data-excol-name="price"] {
+        display: table-row;
+    }
+}
+
+
+/* =====================================
+     < 640 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 640px) {
+    .layout {
+        width: 450px;
+    }
+}
+
+
+/* =====================================
+     < 480 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 480px) {
+    .layout {
+        width: 340px;
+    }
+
+    #productPage ul#listProduct > li {
+        width: 100%;
+    }
+
+    #cartPage #tableProductCart .row > span[data-col-name="quantity"] {
+        display: none;
+    }
+
+    #cartPage #tableProductCart .content > .row-respondsive [data-excol-name="quantity"] {
+        display: table-row;
+    }
+
+    #cartPage #tableProductCart .row > span[data-col-name="name"] {
+        width: 100%;
+    }
+}
+
+
+/* =====================================
+     < 360 /////////////////////////////////////////////////////////// */
+@media screen and (max-width: 360px) {
+    .layout {
+        width: 100%;
+        min-width: 280px;
+        padding: 0 5px;
+    }
+}

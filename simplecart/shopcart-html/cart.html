@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cart</title>
+    <!--<meta charset="utf-8" />-->
+    <!--<meta name="author" content="" />-->
+    <!--<meta name="keywords" content="" />-->
+    <meta name="viewport" content="initial-scale=1" />
+    <!--<link href="#" rel="shortcut icon" type="image/x-icon" />-->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style-document.css" rel="stylesheet" />
+    <link href="css/respondsive.css" rel="stylesheet" />
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/jquery.extended.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body id="cartPage">
+    <div id="document" class="document">
+
+        <!-- Start header area -->
+        <div id="header">
+            <div id="headerArea">
+            </div>
+        </div>
+        <!-- End header area -->
+        <!-- Start content area -->
+        <div id="content">
+            <div id="contentArea" class="layout">
+                <div class="mgT50 mgB50">
+                    <h1 class="heading1 L"><span>Your Cart</span></h1>
+
+                    <div id="tableProductCart" class="table-list-1 mgT20">
+                        <div class="caption">
+                            <div class="row">
+                                <span data-col-name="respondsive"></span>
+                                <span data-col-name="mark"><a class="checked-field-1"><input type="checkbox" name="ckMark" /><i></i></a></span>
+                                <span data-col-name="thumnail">Image</span>
+                                <span data-col-name="name">Product</span>
+                                <span data-col-name="short-description">Description</span>
+                                <span data-col-name="price">Unit Price</span>
+                                <span data-col-name="quantity">Quantity</span>
+                                <span data-col-name="total-price">Price</span>
+                                <span data-col-name="action"></span>
+                            </div>
+                        </div>
+                        <div class="content">
+                        </div>
+                    </div>
+
+                    <div class="mgT50 clear">
+                        <div class="left">
+                            <a class="button-cart w200px" href="product.html">View more...</a>
+                            <a id="emptyCart" class="button-cart red w200px" href="javascript:void(0)">Empty Cart </a>
+                        </div>
+                        <div class="right baseline">
+                            <label class="inlineb w200px fz30 text-left">Total Price</label><b class="fz20" id="cartTotalPrice"></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End content area -->
+        <!-- Start footer area -->
+        <div id="footer">
+            <div id="footerArea">
+            </div>
+        </div>
+        <!-- End footer area -->
+
+    </div>
+    <script>
+        //Get Storage
+        var productCart = getStorage(productsCartStorage);
+        var products = getStorage(productsStorage);
+        var productsCartData = getProductCartDetail(productCart, products);
+
+        // Show Info on Cart
+        showListProductCart(productsCartData);
+        $('#tableProductCart > .content > .row-respondsive > .link-expanded').toggleShow('.content-expanded', { effect: 'slide', outcollapse: false, duration: 100 });
+        displayCartInfo();
+
+        // Remove Cart
+        $('#tableProductCart > .content').find('[data-col-name|="action"] .cart-remove').click(function () {
+            var id = $(this).closest('.row').attr('data-row-id');
+            $(this).closest('.row').remove().next('.row-respondsive').remove();
+            // get Cart from Storage
+            var productCart = getStorage(productsCartStorage);
+            removeCart(id, productCart);
+            //set Cart again to Storage
+            setStorage(productsCartStorage, productCart);
+
+            displayCartInfo();
+        })
+
+        // Change Quantity
+        $('#tableProductCart > .content').find('[data-col-name|="quantity"] input[type="number"]').change(function () {
+            var id = $(this).attr('data-row-id');
+            var value = $(this).val();
+            var price = $(this).attr('data-unitprice');
+            var $totalPrice = $(this).closest('.row').find('[data-col-name|="total-price"]');
+            var $exTotalPrice = $(this).closest('.row').next('.row-respondsive').find('[data-excol-name|="total-price"] span');
+            $.merge($totalPrice, $exTotalPrice).text((price * value).toFixed(2));
+
+            var $exQuantity = $(this).closest('.row').next('.row-respondsive').find('[data-excol-name|="quantity"] input[type="number"]');
+            $exQuantity.val(value);
+
+            // get Cart from Storage
+            var productCart = getStorage(productsCartStorage);
+            updateCart(id, productCart, "Quantity", value);
+            //set Cart again to Storage
+            setStorage(productsCartStorage, productCart);
+
+            displayCartInfo();
+        })
+        $('#tableProductCart > .content').find('[data-excol-name|="quantity"] input[type="number"]').change(function () {
+            var id = $(this).attr('data-row-id');
+            var value = $(this).val();
+            var price = $(this).attr('data-unitprice');
+            var $exTotalPrice = $(this).closest('.row-respondsive').find('[data-excol-name|="total-price"] span');
+            var $totalPrice = $(this).closest('.row-respondsive').prev('.row').find('[data-col-name|="total-price"]');
+            $.merge($totalPrice, $exTotalPrice).text((price * value).toFixed(2));
+
+            var $quantity = $(this).closest('.row-respondsive').prev('.row').find('[data-col-name|="quantity"] input[type="number"]');
+            $quantity.val(value);
+
+            // get Cart from Storage
+            var productCart = getStorage(productsCartStorage);
+            updateCart(id, productCart, "Quantity", value);
+            //set Cart again to Storage
+            setStorage(productsCartStorage, productCart);
+
+            displayCartInfo();
+        })
+
+        // Empty Cart
+        $('#emptyCart').click(function () {
+            removeStorage(productsCartStorage);
+            window.location.href = 'product.html';
+        })
+    </script>
+</body>
+</html>
